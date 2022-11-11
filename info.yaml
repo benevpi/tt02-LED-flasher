@@ -1,7 +1,7 @@
 --- 
 # TinyTapeout project information
 project:
-  wokwi_id:    0        # If using wokwi, set this to your project's ID
+  wokwi_id:    342981109408072274        # If using wokwi, set this to your project's ID
 #  source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. Source files must be in ./src
 #    - counter.v
 #    - decoder.v
@@ -14,33 +14,35 @@ project:
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation: 
-  author:       ""      # Your name
-  discord:      ""      # Your discord handle
-  title:        ""      # Project title
-  description:  ""      # Short description of what your project does
-  how_it_works: ""      # Longer description of how the project works
-  how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  ""      # Describe any external hardware needed
+  author:       "Ben Everard"      # Your name
+  discord:      "benev2"      # Your discord handle
+  title:        "A LED Flasher"      # Project title
+  description:  "Select different inputs to generate different LED patterns"      # Short description of what your project does
+  how_it_works: "see How To Test"      # Longer description of how the project works
+  how_to_test:  "
+  input 1 - clock input
+  input 2 - feed NOT LED 1 back into the shift register -- this creates a pattern where every other LED is switched on
+  input 3 - feed 1 into the shift register if both the first two LEDs are off. This creates a pattern where every third LED is on
+  input 4 - feed 1 into the shift register if the first three LEDs are off. This creates a pattern where every fourth LED is on
+  input 5 - feed 1 into the shift register if all the LEDs are off. This creates a pattern of one light scanning across the LEDs
+  input 6 - set the direction of the shift register
+  input 7 - toggles fixed direction or alternating direction. If alternating direction is set, the direction of the shift register will flip if all the LEDs are off
+  input 8 - enable the clock divider
+"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "A LED on each pin"      # Describe any external hardware needed
   language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     0       # Clock frequency in Hz (if required)
   picture:      ""      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
-    - clock
-    - reset
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+   - clock input
+   - feed NOT LED 1 back into the shift register -- this creates a pattern where every other LED is switched on
+   - feed 1 into the shift register if both the first two LEDs are off. This creates a pattern where every third LED is on
+   - feed 1 into the shift register if the first three LEDs are off. This creates a pattern where every fourth LED is on
+   - feed 1 into the shift register if all the LEDs are off. This creates a pattern of one light scanning across the LEDs
+   - set the direction of the shift register
+   - toggles fixed direction or alternating direction. If alternating direction is set, the direction of the shift register will flip if all the LEDs are off
+   - enable the clock divider
   outputs:
-    - segment a         # a description of what the outputs do
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - none
+    - All LEDs to flash
 
