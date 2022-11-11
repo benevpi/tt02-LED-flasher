@@ -27,22 +27,22 @@ documentation:
   input 5 - feed 1 into the shift register if all the LEDs are off. This creates a pattern of one light scanning across the LEDs
   input 6 - set the direction of the shift register
   input 7 - toggles fixed direction or alternating direction. If alternating direction is set, the direction of the shift register will flip if all the LEDs are off
-  input 8 - enable the clock divider
+  input 8 - enable the clock divider"
 "      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   external_hw:  "A LED on each pin"      # Describe any external hardware needed
   language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
-  doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
+  doc_link:     "https://github.com/benevpi/tt02-LED-flasher/blob/main/README.md"      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     0       # Clock frequency in Hz (if required)
-  picture:      ""      # relative path to a picture in your repository
+  picture:      "https://github.com/benevpi/tt02-LED-flasher/tree/main"      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
-   - clock input
-   - feed NOT LED 1 back into the shift register -- this creates a pattern where every other LED is switched on
-   - feed 1 into the shift register if both the first two LEDs are off. This creates a pattern where every third LED is on
-   - feed 1 into the shift register if the first three LEDs are off. This creates a pattern where every fourth LED is on
-   - feed 1 into the shift register if all the LEDs are off. This creates a pattern of one light scanning across the LEDs
-   - set the direction of the shift register
-   - toggles fixed direction or alternating direction. If alternating direction is set, the direction of the shift register will flip if all the LEDs are off
-   - enable the clock divider
+   - "clock input"
+   - "feed NOT LED 1 back into the shift register -- this creates a pattern where every other LED is switched on"
+   - "feed 1 into the shift register if both the first two LEDs are off. This creates a pattern where every third LED is on"
+   - "feed 1 into the shift register if the first three LEDs are off. This creates a pattern where every fourth LED is on"
+   - "feed 1 into the shift register if all the LEDs are off. This creates a pattern of one light scanning across the LEDs"
+   - "set the direction of the shift register"
+   - "toggles fixed direction or alternating direction. If alternating direction is set, the direction of the shift register will flip if all the LEDs are off"
+   - "enable the clock divider"
   outputs:
-    - All LEDs to flash 
+    - "All LEDs to flash "
 
