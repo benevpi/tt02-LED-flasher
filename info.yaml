@@ -43,5 +43,6 @@ documentation:
    - "toggles fixed direction or alternating direction. If alternating direction is set, the direction of the shift register will flip if all the LEDs are off"
    - "enable the clock divider"
   outputs:
-    - "All LEDs to flash "
+    - "LEDs to flash "
+    - "Even more LEDs to flash"
 
