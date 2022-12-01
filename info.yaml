@@ -34,15 +34,21 @@ documentation:
   clock_hz:     0       # Clock frequency in Hz (if required)
   picture:      "https://github.com/benevpi/tt02-LED-flasher/tree/main"      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
-   - "clock input"
-   - "feed NOT LED 1 back into the shift register -- this creates a pattern where every other LED is switched on"
-   - "feed 1 into the shift register if both the first two LEDs are off. This creates a pattern where every third LED is on"
-   - "feed 1 into the shift register if the first three LEDs are off. This creates a pattern where every fourth LED is on"
-   - "feed 1 into the shift register if all the LEDs are off. This creates a pattern of one light scanning across the LEDs"
-   - "set the direction of the shift register"
-   - "toggles fixed direction or alternating direction. If alternating direction is set, the direction of the shift register will flip if all the LEDs are off"
-   - "enable the clock divider"
+   - clock
+   - not_1
+   - not_1_2
+   - not_1_2_3
+   - not_all
+   - direction
+   - toggle_direction
+   - clock_div_enable
   outputs:
-    - "LEDs to flash "
-    - "Even more LEDs to flash"
+    - LED1
+    - LED2
+    - LED3
+    - LED4
+    - LED5
+    - LED6
+    - LED7
+    - LED8
 
